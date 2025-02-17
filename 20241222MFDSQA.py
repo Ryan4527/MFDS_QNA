@@ -10,8 +10,8 @@ from datetime import datetime
 data_file = '2024MFDSQNA.csv'
 log_file = 'Q_search_log.csv'
 
-st.set_page_config(page_title="2024 식약처 자연어 QNA 검색", layout="wide")
-st.title("2024 식약처 자연어 QNA 검색")
+st.set_page_config(page_title="식약처 질의응답을 문장으로 검색", layout="wide")
+st.title("식약처 질의응답을 문장으로 검색")
 st.text("입력된 문장으로 가장 유사한 질의응답을 찾아줍니다.")
 
 df = pd.read_csv(data_file)
