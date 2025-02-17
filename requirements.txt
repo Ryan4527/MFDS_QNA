@@ -1,0 +1,6 @@
+streamlit
+pandas
+openpyxl
+sklearn
+nympy
+datetime
