@@ -1,6 +1,6 @@
+scikit-learn
 streamlit
 pandas
 openpyxl
-scikit-learn
 nympy
 datetime
