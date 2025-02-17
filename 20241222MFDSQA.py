@@ -6,7 +6,6 @@ import numpy as np
 import streamlit as st
 from datetime import datetime
 
-
 data_file = '2024MFDSQNA.csv'
 log_file = 'Q_search_log.csv'
 
