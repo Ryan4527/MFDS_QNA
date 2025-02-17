@@ -1,6 +1,5 @@
 scikit-learn
 streamlit
 pandas
-openpyxl
-nympy
+numpy
 datetime
