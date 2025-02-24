@@ -5,9 +5,10 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 from datetime import datetime
+import os
 
 data_file = '2024MFDSQNA.csv'
-log_file = 'Q_search_log.csv'
+log_file = os.path.join(os.getcwd(), 'Q_search_log.csv')
 
 st.set_page_config(page_title="식약처 질의응답을 문장으로 검색", layout="wide")
 st.title("식약처 질의응답을 문장으로 검색")
@@ -23,8 +24,9 @@ def save_log(new_post, search_time):
 
     # 기존 로그가 있으면 불러오기
     try:
-        existing_logs = pd.read_csv(log_file)
-        log_data = pd.concat([existing_logs, log_data], ignore_index=True)
+        if os.path.exists(log_file):
+            existing_logs = pd.read_csv(log_file)
+            log_data = pd.concat([existing_logs, log_data], ignore_index=True)
     except FileNotFoundError:
         pass
 
