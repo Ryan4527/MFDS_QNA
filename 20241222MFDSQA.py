@@ -24,7 +24,7 @@ def save_log(new_post, search_time):
 
     # 기존 로그가 있으면 불러오기
     try:
-        if os.path.exists(log_file):
+        if os.path.exists(log_file) and os.path.getsize(log_file) > 0:
             existing_logs = pd.read_csv(log_file)
             log_data = pd.concat([existing_logs, log_data], ignore_index=True)
     except FileNotFoundError:
