@@ -10,6 +10,11 @@ import os
 data_file = '2024MFDSQNA.csv'
 log_file = os.path.join(os.getcwd(), 'Q_search_log.csv')
 
+# 파일이 없으면 자동 생성
+if not os.path.exists(log_file):
+    df = pd.DataFrame(columns=["입력 문장", "입력 시간"])
+    df.to_csv(log_file, index=False, encoding="utf-8-sig")
+
 st.set_page_config(page_title="식약처 질의응답을 문장으로 검색", layout="wide")
 st.title("식약처 질의응답을 문장으로 검색")
 st.text("입력된 문장으로 가장 유사한 질의응답을 찾아줍니다.")
