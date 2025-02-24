@@ -40,6 +40,7 @@ def save_log(new_post, search_time):
 if new_post:
     search_time = datetime.now().strftime("%y-%m-%d %H:%M:%S")
     save_log(new_post, search_time)
+    st.success("log가 저장됨됨")
 
     vectorizer = TfidfVectorizer()
     tfidf_matrix = vectorizer.fit_transform(df['QNA'].tolist() + [new_post])
