@@ -18,7 +18,8 @@ if not os.path.exists(log_file):
 st.set_page_config(page_title="식약처 질의응답을 문장으로 검색", layout="wide")
 st.title("식약처 질의응답을 문장으로 검색")
 st.text("입력된 문장으로 가장 유사한 질의응답을 찾아줍니다.")
-
+st.text("아래는 검색 예제입니다.")
+st.image("example.jpg", use_column_width=True)
 df = pd.read_csv(data_file)
 
 new_post = st.text_input("검색할 질의 문장을 입력하세요.")
