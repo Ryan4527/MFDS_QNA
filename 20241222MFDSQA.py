@@ -64,7 +64,7 @@ if new_post:
         "유사도 점수": top_scores,
         "QNA": df.iloc[top_indices]["QNA"].values
     }))
-
+st.markdown("[👉 AI Pharma 네이버 카페 바로가기](https://cafe.naver.com/aipharma)")
 
 # print(f"가장 유사한 문장: {df.iloc[most_similar_index]['QNA']}")
 # print(f"유사도 점수: {most_similar_score:.2f}")
