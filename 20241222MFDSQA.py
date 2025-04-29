@@ -18,6 +18,7 @@ if not os.path.exists(log_file):
 st.set_page_config(page_title="식약처 질의응답을 문장으로 검색", layout="wide")
 st.title("식약처 질의응답을 문장으로 검색")
 st.text("입력된 문장으로 가장 유사한 질의응답을 찾아줍니다.")
+st.markdown("[👉 AI Pharma 네이버 카페 바로가기](https://cafe.naver.com/aipharma)")
 st.markdown("아래는 검색 예제입니다.")
 st.image("example.jpg", caption="example", use_container_width=True)
 df = pd.read_csv(data_file)
